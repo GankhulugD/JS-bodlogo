@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+    
+      >
+  
+</head>
+<body>
+   <div class="columns mt-6"> <!-- Bulma grid system: columns үүсгэж, дээрээс margin өгсөн -->
+        <div class="column is-half is-offset-one-quarter"> <!-- 50% өргөнтэй багана, төвлөрсөн -->
+            
+            <article class="message"> <!-- Bulma message box -->
+                <div class="message-body" id="result"> </div><!-- Доторх текстийг JavaScript-аар өөрчилнө -->
+                
+            </article>
+
+            <div class="columns mb-5"> 
+                <button class="button is-dark column ml-6 is-2" onclick="b_huvi();">%</button> 
+                <button class="button is-dark column ml-4 is-2" onclick="b_ce();">CE</button> 
+                <button class="button is-dark column ml-4 is-2" onclick="b_c();">C</button> 
+                <button class="button is-active column ml-4 mr-6 is-2" onclick="b_backspace();">⌫</button> 
+            </div> 
+            <div class="columns mb-5"> 
+                <button class="button is-dark column ml-6 is-2" onclick="b7();">7</button> 
+                <button class="button is-dark column ml-4 is-2" onclick="b8();">8</button> 
+                <button class="button is-dark column ml-4 is-2" onclick="b9();">9</button> 
+                <button class="button is-active column ml-4 mr-6 is-2" onclick="b_huwaah();">÷</button> 
+            </div>   
+            <div class="columns mb-5"> 
+                <button class="button is-dark column ml-6 is-2" onclick="b4();">4</button> 
+                <button class="button is-dark column ml-4 is-2" onclick="b5();">5</button> 
+                <button class="button is-dark column ml-4 is-2" onclick="b6();">6</button> 
+                <button class="button is-active column ml-4 mr-6 is-2" onclick="b_urjih();">×</button> 
+            </div> 
+            <div class="columns mb-5"> 
+                <button class="button is-dark column ml-6 is-2" onclick="b1();">1</button> 
+                <button class="button is-dark column ml-4 is-2" onclick="b2();">2</button> 
+                <button class="button is-dark column ml-4 is-2" onclick="b3();">3</button> 
+                <button class="button is-active column ml-4 mr-6 is-2" onclick="b_hasah();">-</button> 
+            </div> 
+            <div class="columns mb-5"> 
+                <button class="button is-dark column ml-6 is-2" onclick="b_temdeg();">+/-</button> 
+                <button class="button is-dark column ml-4 is-2" onclick="b0();">0</button> 
+                <button class="button is-dark column ml-4 is-2" onclick="b_tseg();">.</button> 
+                <button class="button is-active column ml-4 mr-6 is-2" onclick="b_nemeh();">+</button> 
+            </div> 
+            <div class="columns mb-5"> 
+                <button class="button is-danger is-light column ml-6 mr-6 is-2" onclick="b_tentsuu();">=</button> 
+            </div> 
+            
+
+        </div> 
+    </div> 
+
+    <script>
+        //
+         let output = 0;
+         let output2 =0;
+         let output3 =0;
+         output= Number();
+         output2= Number();
+         function print(){
+         document.getElementById("result").innerText=output;
+         }
+         function print2(){
+         document.getElementById("result").innerText=output2;
+         }
+         function print3(){
+         document.getElementById("result").innerText=output3;
+         }
+         function b0() {
+            output = output*10;
+            output = output+0;
+            print();
+         }
+         function b7() {
+            output = output*10;
+            output = output+7;
+            print();
+         }
+         function b8() {
+            output = output*10;
+            output = output+8;
+            print();
+         }function b9() {
+            output = output*10;
+            output = output+9;
+            print();
+         }
+         function b4() {
+            output = output*10;
+            output = output+4;
+            print();
+         }
+         function b5() {
+            output = output*10;
+            output = output+5;
+            print();
+         }
+         function b6() {
+            output = output*10;
+            output = output+6;
+            print();
+         }
+         function b1() {
+            output = output*10;
+            output = output+1;
+            print();
+         }
+         function b2() {
+            output = output*10;
+            output = output+2;
+            print();
+         }
+         function b3() {
+            output = output*10;
+            output = output+3;
+            print();
+         }
+         function b4() {
+            output = output*10;
+            output = output+4;
+            print();
+         }
+         function b5() {
+            output = output*10;
+            output = output+5;
+            print();
+         }
+         function b_backspace() {
+            output = output.toString().slice(0, -1); // тоог string болгож, сүүлийн цифрийг хасна
+            if (output === "") {
+            output = 0; // Хоосон бол 0 болгож буцаана
+            } else {
+            output = Number(output); // дахин тоо болгоно
+            }
+            print();
+         }
+         function b_huwaah() {
+            output2 = output;
+            output = 0;
+            print2();
+            output3 = "÷";
+            print3();
+         }
+         function b_urjih() {
+            output2 = output;
+            output = 0;
+            print2();
+            output3 = "×";
+            print3();
+         }
+         function b_hasah() {
+            output2 = output;
+            output = 0;
+            print2();
+            output3 = "-";
+            print3();
+         }
+         function b_nemeh() {
+            output2 = output;
+            output = 0;
+            print2();
+            output3 = "+";
+            print3();
+         }
+         function b_ce() {
+            output = 0;
+            print();
+         }
+         function b_c() {
+            output = 0;
+            output2 =0;
+            output3 =0;
+            print();
+         }
+         function b_temdeg() {
+            output = output-(output*2);
+            print();
+         }
+
+         function b_tentsuu() {
+            if(output3 =="÷"){
+                output = output2/output;
+                print();
+                output3 = 0;
+            }
+            else if(output3 =="×"){
+                output = output2*output;
+                print();
+                output3 = 0;
+            }
+            else if(output3 =="-"){
+                output = output2-output;
+                print();
+                output3 = 0;
+            }
+            else if(output3 =="+"){
+                output = output2+output;
+                print();
+                output3 = 0;
+            }
+         }
+
+
+
+    </script>
+</body>
+</html>

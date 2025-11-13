@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+</head>
+<body>
+    <div class="columns mt-6"> <!-- Bulma grid system: columns үүсгэж, дээрээс margin өгсөн -->
+        <div class="column is-half is-offset-one-quarter"> <!-- 50% өргөнтэй багана, төвлөрсөн -->
+            
+            <article class="message"> <!-- Bulma message box -->
+                <div class="message-body" id="result"> </div><!-- Доторх текстийг JavaScript-аар өөрчилнө -->
+                
+            </article>
+
+            <div class="columns mb-5"> 
+                <button class="button is-link column ml-6 is-2" onclick="bodlogo1();">bodlogo 1:</button> 
+                <button class="button is-info column ml-4 is-2" onclick="bodlogo2();">bodlogo 2:</button> 
+                <button class="button is-warning column ml-4 is-2" onclick="bodlogo3();">bodlogo 3:</button> 
+                <button class="button is-success column ml-4 mr-6 is-2" onclick="bodlogo4();">bodlogo 4:</button> 
+            </div> 
+            <div class="columns mb-5"> 
+                <button class="button is-info column ml-6 is-2" onclick="bodlogo5();">bodlogo 5:</button> 
+                <button class="button is-warning column ml-4 is-2" onclick="bodlogo6();">bodlogo 6:</button> 
+                <button class="button is-success column ml-4 is-2" onclick="bodlogo7();">bodlogo 7:</button> 
+                <button class="button is-link column ml-4 mr-6 is-2" onclick="bodlogo8();">bodlogo 8:</button> 
+            </div> 
+            <div class="columns mb-5"> 
+                <button class="button is-warning column ml-6 is-2" onclick="bodlogo9();">bodlogo 9:</button> 
+                <button class="button is-success column ml-4 is-2" onclick="bodlogo10();">bodlogo 10:</button> 
+                <button class="button is-link column ml-4 is-2" onclick="bodlogo11();">bodlogo 11:</button> 
+                <button class="button is-info column ml-4 mr-6 is-2" onclick="bodlogo12();">bodlogo 12:</button> 
+            </div>   
+            <div class="columns mb-5"> 
+                <button class="button is-success column ml-6 is-2" onclick="bodlogo13();">13</button> 
+                <button class="button is-link column ml-4 is-2" onclick="bodlogo14();">14</button> 
+                <button class="button is-info column ml-4 is-2" onclick="bodlogo15();">15</button> 
+                <button class="button is-warning column ml-4 mr-6 is-2" onclick="bodlogo16();">16</button> 
+            </div> 
+            
+
+        </div> 
+    </div> 
+
+    <article class="message"> 
+            <div class="message-body" id="result"></div>
+    </article>
+
+
+    <script>
+
+        let output=0;
+
+        
+        document.getElementById("result").innerText = output;
+        
+        //bodloguud
+        function bodlogo1(){
+            let n =prompt("(1 ees n hurtelh toonuud) n тоог оруулна уу:");
+            let i = 1;
+            while (i < n) {
+                output += i + " ";
+                document.getElementById("result").innerText = output;
+                i++;
+            }
+        }
+        
+        function bodlogo2() {
+            let n = prompt("(1 ees n hurtelh tegsh toonuud)n тоог оруулна уу:");
+            let output = "";
+            let i = 1;
+            while ( i <= n) {
+                if (i % 2 === 0) {      // i-г 2-т хуваахад үлдэгдэл 0 бол тэгш тоо
+                    output += i + " ";
+                }
+                i++
+            }
+            document.getElementById("result").innerText = output;
+        }
+        function bodlogo3() {
+            let n = prompt("(1 ees n hurtelh toonuudiin niilber)n тоог оруулна уу:");
+            let output = 0;
+            let i = 1;
+            while ( i <= n) {
+                output += i++;
+            }
+            document.getElementById("result").innerText = output;
+        }
+        function bodlogo4() {
+            let n = prompt("(1 ees n hurtelh toonuudiin niilber)n тоог оруулна уу:");
+            let output = 0;
+            let i = 1;
+            while ( i <= n) {
+                if(i % 2 === 1){
+                    output += i;
+                }  
+                i++;
+            }
+            document.getElementById("result").innerText = output;
+        }
+        function bodlogo6() {
+            let n = prompt("(heden orontoi we) тоог оруулна уу:");
+            let output = 0;
+            while ( n > 0) {
+                n = n.toString().slice(0, -1);
+                output = output+1;
+            }
+            document.getElementById("result").innerText = output;
+        }
+        // function bodlogo7(){
+        //     let n =promt("(toonii ehnii bolon suuliin oron) тоог оруулна уу");
+        //     let output =0;
+        //     let a =0;
+        //     let z =0;
+        //     z =n %10;
+        //     while (n<=9){
+        //         n = n.toString().slice(0, -1);
+        //     }
+        //     document.getElementById("result").innerText = ;
+        //     document.getElementById("result").innerText = z;
+        // }
+    </script>
+    
+</body>
+</html>

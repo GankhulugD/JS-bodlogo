@@ -1,0 +1,12 @@
+.button {
+  border-radius: 15px;
+  box-shadow: 6px 6px 10px #bebebe, -6px -6px 10px #ffffff;
+  transition: 0.2s;
+}
+.button:active {
+  box-shadow: inset 4px 4px 6px #bebebe, inset -4px -4px 6px #ffffff;
+}
+.message-body {
+  border-radius: 20px;
+  box-shadow: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
+}

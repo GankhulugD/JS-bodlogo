@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+  >
+
+</head>
+<body>
+
+    <div class="columns mt-6">
+        <div class="column is-half
+        is-offset-one-quarter">
+        <div class="mb-4">
+        <button class="button is-white"onclick="bodlogo1();">Bodlogo1</button>
+        <button class="button is-black"onclick="bodlogo2();">Bodlogo2</button>
+        <button class="button is-dark"onclick="bodlogo3();">Bodlogo3</button>
+        </div>   
+        
+        
+
+
+            <article class="message">
+                    
+                    <div class="message-body" id="result">
+                        
+                    </div>
+            </article>
+
+        </div>
+        
+
+    
+    </div>
+
+<script>
+    
+//
+    let output;
+    function print(){
+    document.getElementById("result").innerText=output;
+    }
+
+//Odd or Even
+    function bodlogo1(){
+        
+       let too =prompt("(tegsh sondgoig oloh hha) too oruulna uu:");;
+       let TOO=Number(too);
+       output=TOO;
+       if(output%2==1){
+       output=("sondgoi");
+       }
+       else{
+        output=("tegsh");
+       }
+       print();
+       }
+
+
+//Age Group: <13 Child, 13-19 Teen, 20-64 Adult, 65+ Senior
+function bodlogo2(){
+    let too =prompt("(Age Group) too oruulna uu:");
+       let TOO=Number(too);
+       output=TOO;
+       if(output <13){
+       output=("child");
+       }
+       if(output>=13 && output<=19){
+        output=("teen");
+       }
+       if(output>19 && output<=64){
+        output=("adult");
+       }
+       if(output >=65){
+       output=("senior");
+       }
+       print();
+       }
+       
+
+//gurwaljingiin taluud
+function bodlogo3(){
+    let input1 =prompt("(Triangle Checker)ehnii taliig oruulna uu:");
+    let input2 =prompt("hoyor dahi taliig oruulna uu:");
+    let input3 =prompt("guraw dahi taliig oruulna uu:");
+    
+}
+
+
+</script>
+
+</body>
+</html>

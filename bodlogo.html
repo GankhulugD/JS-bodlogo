@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="columns mt-6">
+      <div class="column is-half is-offset-one-quarter">
+        <div class="mb-4">
+          <button class="button is-white" onclick="bodlogo1();">
+            Bodlogo1
+          </button>
+          <button class="button is-black" onclick="bodlogo2();">
+            Bodlogo2
+          </button>
+          <button class="button is-dark" onclick="bodlogo3();">Dark</button>
+        </div>
+
+        <article class="message">
+          <div class="message-body" id="result"></div>
+        </article>
+      </div>
+    </div>
+
+    <script>
+      let output;
+
+      // Үр дүнг "result" div-д харуулах function
+      function print() {
+        document.getElementById("result").innerText = output;
+      }
+
+      // 🔹 Bodlogo1: Tegsh эсвэл Sondgoi
+      function bodlogo1() {
+        let too = prompt("(tegsh sondgoig oloh hha) too oruulna uu:"); // Хэрэглэгчээс тоо асуух
+        let TOO = Number(too); // Стрингийг тоо болгон хөрвүүлэх
+        output = TOO; // output-д хадгалах (аль хэдийн хэрэглэхгүй, доор дахин өөрчилнө)
+        if (output % 2 == 1) {
+          // Хэрвээ үлдэгдэл 1 бол
+          output = "sondgoi"; // output-г "sondgoi" болгож өөрчлөх
+        } else {
+          output = "tegsh"; // Үгүй бол "tegsh"
+        }
+        print(); // Хариуг дэлгэцэнд харуулах
+      }
+
+      // 🔹 Bodlogo2: Насны бүлэг тодорхойлох
+      // Age Group: <13 Child, 13-19 Teen, 20-64 Adult, 65+ Senior
+      function bodlogo2() {
+        let too = prompt("(Age Group) too oruulna uu:"); // Хэрэглэгчээс нас асуух
+        let TOO = Number(too); // Стрингийг тоо болгон хөрвүүлэх
+        output = TOO; // output-д хадгалах (доор дахин өөрчлөгдөнө)
+
+        if (output < 13) {
+          // Нас 13-с бага бол
+          output = "child"; // хүүхэд
+        }
+        if (output >= 13 && output <= 19) {
+          // 13-19 насны хооронд
+          output = "teen"; // залуу
+        }
+        if (output > 19 && output <= 64) {
+          // 20-64 насны хооронд
+          output = "adult"; // насанд хүрсэн
+        }
+        if (output >= 65) {
+          // 65 ба түүнээс дээш
+          output = "senior"; // хөгшин
+        }
+        print(); // Хариуг дэлгэцэнд харуулах
+      }
+
+      // Хэрэв хэрэгтэй бол Dark товчийг ажиллуулах bodlogo3 function-ийг нэмж болно
+    </script>
+  </body>
+</html>
