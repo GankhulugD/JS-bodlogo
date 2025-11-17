@@ -568,3 +568,55 @@ function bodlogo3_21() {
 
   document.getElementById("result").innerText = output;
 }
+
+function bodlogo4_1() {
+  output = "Pinecone";
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo4_2() {
+  output = " ";
+  let a = "Pinecone ";
+  let i = 0;
+  while (i < 10) {
+    output += a + "\n";
+    i++;
+  }
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo4_3() {
+  let b = prompt("(Pinecone-г n удаа хэвлэ)");
+  output = " ";
+  let a = "Pinecone ";
+  let i = 0;
+  while (i < b) {
+    output += a + "\n";
+    i++;
+  }
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo4_4() {
+  let result = [];
+  output = 1;
+  let i = 2;
+  while (output < 20) {
+    result.push(output);
+
+    const urDun = (document.getElementById("result").innerText = result.map(
+      (too) => {
+        too;
+      }
+    ));
+    console.log(urDun);
+
+    output += i;
+  }
+}
+
+const srt = "Hello";
+for (let i = 0; i < str.length; i++) {
+  let result = str[i];
+  return result;
+}
