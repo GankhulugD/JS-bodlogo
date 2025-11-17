@@ -4,6 +4,7 @@ document.getElementById("result").innerText = output;
 
 //bodloguud
 function bodlogo1() {
+  output = 0;
   let a = prompt("(Гурвалжингийн приметрийг олох) эхний талыг оруулна уу:");
   let b = prompt("(Гурвалжингийн приметрийг олох) 2 дох талыг оруулна уу:");
   let c = prompt("(Гурвалжингийн приметрийг олох) 3 дах талыг оруулна уу:");
@@ -12,12 +13,14 @@ function bodlogo1() {
 }
 
 function bodlogo2() {
+  output = 0;
   let n = +1 + +3 + +5 + +7 + +8.7;
   output = "(1,3,5,7,8.7 бүхэл тооны нийлбэрийг ол) =" + n;
   document.getElementById("result").innerText = output;
 }
 
 function bodlogo3() {
+  output = 0;
   let n = +10 + +5;
   let a = +10 * +5;
   output =
@@ -29,6 +32,7 @@ function bodlogo3() {
 }
 
 function bodlogo4() {
+  output = 0;
   let n = Math.floor(98 / 60);
   let a = 98 % 60;
   output =
@@ -37,6 +41,7 @@ function bodlogo4() {
 }
 
 function bodlogo5() {
+  output = 0;
   let n = +prompt(
     "(өгөгдсөн секундыг цаг минут секунд болго) секунд оруулна уу:"
   );
@@ -55,6 +60,7 @@ function bodlogo5() {
 }
 
 function bodlogo6() {
+  output = 0;
   let a = +prompt("(өгөгдсөн минут секундыг секунд болго) минут оруулна уу:");
   let b = +prompt("(өгөгдсөн минут секундыг секунд болго) секунд оруулна уу:");
   if (a >= 0) {
@@ -68,6 +74,7 @@ function bodlogo6() {
 }
 
 function bodlogo7() {
+  output = 0;
   let c = +prompt("(өгөгдсөн цаг минут секундыг секунд болго) цаг оруулна уу:");
   let a = +prompt(
     "(өгөгдсөн цаг минут секундыг секунд болго) минут оруулна уу:"
@@ -94,6 +101,7 @@ function bodlogo7() {
 }
 
 function bodlogo2_1() {
+  output = 0;
   let a = +prompt("(өгөгдсөн цагыг хоног цаг болго) цагийг оруулна уу:");
   let honog = Math.floor(a / 24);
   let tsag = a % 24;
@@ -103,6 +111,7 @@ function bodlogo2_1() {
 }
 
 function bodlogo2_2() {
+  output = 0;
   let a = +prompt("(өгөгдсөн хоног цагийг цаг болго) хоног оруулна уу:");
   let b = +prompt("(өгөгдсөн хоног цагийг цаг болго) цаг оруулна уу:");
   if (a >= 1) {
@@ -124,6 +133,7 @@ function bodlogo2_3() {
 }
 
 function bodlogo2_4() {
+  output = 0;
   let a = +prompt("(өгөгдсөн жил, сарыг сар болго) жил оруулна уу:");
   let b = +prompt("(өгөгдсөн жил, сарыг сар болго) сар оруулна уу:");
   if (a >= 1) {
@@ -137,6 +147,7 @@ function bodlogo2_4() {
 }
 
 function bodlogo2_5() {
+  output = 0;
   let a = +prompt("(өгөгдсөн 4 тооны ихийг ол) 1-р тоог оруулна уу:");
   let b = +prompt("(өгөгдсөн 4 тооны ихийг ол) 2-р тоог оруулна уу:");
   let c = +prompt("(өгөгдсөн 4 тооны ихийг ол) 3-р тоог оруулна уу:");
@@ -157,6 +168,7 @@ function bodlogo2_5() {
 }
 
 function bodlogo2_6() {
+  output = 0;
   let a = +prompt("(5-аас бага тоонуудын үржвэрийг олох) 1-р тоог оруулна уу:");
   let b = +prompt("(5-аас бага тоонуудын үржвэрийг олох) 2-р тоог оруулна уу:");
   let c = +prompt("(5-аас бага тоонуудын үржвэрийг олох) 3-р тоог оруулна уу:");
@@ -188,6 +200,7 @@ function bodlogo2_6() {
 }
 
 function bodlogo2_7() {
+  output = 0;
   let a = +prompt("(5-аас бага тоонуудын үржвэрийг олох) 1-р тоог оруулна уу:");
   let b = +prompt("(5-аас бага тоонуудын үржвэрийг олох) 2-р тоог оруулна уу:");
   let c = +prompt("(5-аас бага тоонуудын үржвэрийг олох) 3-р тоог оруулна уу:");
@@ -225,12 +238,333 @@ function bodlogo2_7() {
   document.getElementById("result").innerText = output;
 }
 
-// let a = 1;
-// let b = 2;
+function bodlogo3_1() {
+  output = 0;
+  let a = +prompt("(2  тооны ихийг олох) a too oruulna uu:");
+  let b = +prompt("(2  тооны ихийг олох) b too oruulna uu:");
+  if (a > b) {
+    output = a + " тоо нь их";
+  } else {
+    output = b + " тоо нь их";
+  }
+  document.getElementById("result").innerText = output;
+}
 
-// const addInt = () => {
-//   c = a + b;
-//   console.log(c, "dsadsads");
+function bodlogo3_2() {
+  output = 0;
+  let too = prompt("(тэгш сондгой олох hha) тоо оруулна уу:");
+  let TOO = Number(too);
+  output = TOO;
+  if (output % 2 == 1) {
+    output = "сондго";
+  } else {
+    output = "тэгш";
+  }
+  document.getElementById("result").innerText = output;
+}
 
-//   return c;
-// };
+function bodlogo3_3() {
+  output = 0;
+  let a = +prompt("(өгөгдсөн 3 тооны их багыг ол) 1-р тоог оруулна уу:");
+  let b = +prompt("(өгөгдсөн 3 тооны их багыг ол) 2-р тоог оруулна уу:");
+  let c = +prompt("(өгөгдсөн 3 тооны их багыг ол) 3-р тоог оруулна уу:");
+  let ih = 0;
+  let baga = 0;
+  if (a > b && a > c) {
+    ih = a;
+  } else if (b > a && b > c) {
+    ih = b;
+  } else if (c > a && c > b) {
+    ih = c;
+  }
+
+  if (a < b && a < c) {
+    baga = a;
+  } else if (b < a && b < c) {
+    baga = b;
+  } else if (c < a && c < b) {
+    baga = c;
+  }
+  output = ih + " нь их " + baga + "нь  бага";
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo3_4() {
+  output = 0;
+  let a = prompt("(string -ийн уртийг хэвлэх) string -ийг оруулна уу");
+  output = a.length;
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo3_5() {
+  output = 0;
+  let a = prompt("(стрингийн эхний болон сүүлийн элемент) стринг оруулна уу");
+  let urt = a.length;
+  let last = a[urt - 1];
+  let first = a[0];
+  output = "эхний тэмдэгт " + first + " сүүлийн тэмдэгт " + last;
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo3_6() {
+  output = 0;
+  let a = prompt("(стрингийг том үсэг болгох) стринг оруулна уу");
+  let anh = a;
+  let tom = a.toUpperCase();
+  output = "таний оруулсан стринг: " + anh + " томруулсан стринг: " + tom;
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo3_7() {
+  output = 0;
+  let a = prompt(
+    "(стринг дотор тусгай тэмдэгт байгаа эсэхийг шалгах. тусгай тэмдэгт 'n') стринг оруулна уу"
+  );
+  let urt = a.length;
+  let n = "n";
+  let i = 0;
+  while (i < urt) {
+    if (n == a[i]) {
+      output = 1;
+    }
+    i++;
+  }
+  if (output == 1) {
+    output = "true";
+  } else {
+    output = "false";
+  }
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo3_8() {
+  output = 0;
+  fizz = 0;
+  buzz = 0;
+  let a = +prompt(
+    "тоог 3 болон 5-аар хуваагддаг эсэхийг шалгах. 3-т хуваагдал Fizz, 5-т хуваагдал Buzz,"
+  );
+  if (a % 3 === 0) {
+    fizz = 1;
+  } else {
+    fizz = 0;
+  }
+  if (a % 5 === 0) {
+    buzz = 1;
+  } else {
+    buzz = 0;
+  }
+
+  if (fizz === 1 && buzz === 1) {
+    output = "FizzBuzz";
+  } else if (fizz === 1) {
+    output = "Fizz";
+  } else if (buzz === 1) {
+    output = "Buzz";
+  } else {
+    output = 0;
+  }
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo3_9() {
+  output = 0;
+  let a = prompt("(2 стрингийг нэгтгэх) эхний стрингийг оруулна уу");
+  let b = prompt("(2 стрингийг нэгтгэх) дараагий стрингийг оруулна уу");
+  output = a + b;
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo3_10() {
+  output = 0;
+  let a = +prompt("(2 тооны дундаж) эхний тоог оруулна уу");
+  let b = +prompt("(2 тооны дундаж) дараагын тоог оруулна уу");
+  output = (a + b) / 2;
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo3_11() {
+  output = 0;
+  let a = +prompt("(эерэг сөрөг эсэхийг шалгах) эхний тоог оруулна уу");
+  if (a > 0) {
+    output = "эерэг";
+  }
+  if (a < 0) {
+    output = "сөрөг";
+  } else if (a === 0) {
+    output = "тэгтэй тэнцүү";
+  }
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo3_12() {
+  output = 0;
+  let a = +prompt("(тоог 10 аас их эсэхийг шалгах) тоог оруулна уу");
+  if (a > 10) {
+    output = "тоо 10 аас их";
+  } else if (a === 10) {
+    output = "тоо 10 тай тэнцүү";
+  } else {
+    output = "тоо 10 аас бага";
+  }
+
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo3_13() {
+  output = 0;
+  let a = +prompt("(2 тоо тэнцүү эсэхийг шалгах) эхний тоог оруулна уу");
+  let b = +prompt("(2 тоо тэнцүү эсэхийг шалгах) дараагын тоог оруулна уу");
+  if (a == b) {
+    output = "2 тоо тэнцүү байна";
+  } else {
+    output = "2 тоо ялгаатай байна";
+  }
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo3_14() {
+  output = 0;
+  let a = +prompt(
+    "(Тоог 100-аас их, 0-аас бага эсэхийг шалгах) тоог оруулна уу"
+  );
+  if (a < 100) {
+    output = "тоо 100 аас их байна";
+  } else if (a < 0) {
+    output = "тоо 0 ээс бага байна";
+  } else {
+    output = "тоо 100 аас бага 0 ээс их байна";
+  }
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo3_15() {
+  output = 0;
+  let a = +prompt("(Тоог 10%, 20%, 30% өсгөх) тоог оруулна уу");
+  output = a * 1.1 + " " + a * 1.2 + " " + a * 1.3;
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo3_16() {
+  output = 0;
+  let a = +prompt("(Тоог 100-аас хэтэрвэл 100 болгож хэвлэх) тоог оруулна уу");
+  if (a > 100) {
+    output = 100;
+  } else {
+    output = a;
+  }
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo3_17() {
+  output = 0;
+  let a = prompt("(Хоёр тэмдэгт ижил эсэхийг шалгах) тоог оруулна уу");
+  let b = prompt("(Хоёр тэмдэгт ижил эсэхийг шалгах) тоог оруулна уу");
+  if (a === b) {
+    output = "2 тэмдэгт ижил байна";
+  } else {
+    output = "2 тэмдэгт ялгаатай байна";
+  }
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo3_18() {
+  output = 0;
+  let a = prompt(
+    "(Хоёр оронтой тооны цифрүүдийг сольж урвуулах) тоог оруулна уу"
+  );
+  let negj = 0;
+  let arawt = 0;
+  if (a > 99 || a < 0) {
+    output = "2 оронтой тоо оруулна уу";
+  } else {
+    negj = a % 10;
+    arawt = Math.floor(a / 10);
+    output = negj * 10 + arawt;
+  }
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo3_19() {
+  output = 0;
+  let a = prompt(
+    "(Тоо сөрөг бол эерэг болгож, эерэг бол хэвээр үлдээх) тоог оруулна уу"
+  );
+  if (a < 0) {
+    output = Math.abs(a);
+  } else {
+    output = a;
+  }
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo3_20() {
+  output = 0;
+
+  let miSec = Date.now();
+  const sec = 1000;
+  const min = sec * 60;
+  const hour = min * 60;
+  const day = hour * 24;
+
+  const year_avg = 365.25 * day;
+  const month_avg = year_avg / 12;
+
+  let remainingMs = miSec;
+
+  let years = Math.floor(remainingMs / year_avg);
+  remainingMs = remainingMs % year_avg;
+
+  let months = Math.floor(remainingMs / month_avg);
+  remainingMs = remainingMs % month_avg;
+
+  let days = Math.floor(remainingMs / day);
+  remainingMs = remainingMs % day;
+  let hours = Math.floor(remainingMs / hour);
+  remainingMs = remainingMs % hour;
+  let minutes = Math.floor(remainingMs / min);
+  remainingMs = remainingMs % min;
+  let seconds = Math.floor(remainingMs / sec);
+  let milliseconds = remainingMs % sec; // Үлдсэн ms
+
+  output = `
+        1970.01.01-ээс хойш өнгөрсөн хугацаа:
+        - Он (ойролцоо): ${years}
+        - Сар (ойролцоо): ${months}
+        - Өдөр: ${days}
+        - Цаг: ${hours}
+        - Минут: ${minutes}
+        - Секунд: ${seconds}
+        - Миллисекунд: ${milliseconds}
+    `;
+
+  document.getElementById("result").innerText = output;
+}
+function bodlogo3_21() {
+  output = 0;
+  let b = +prompt(
+    "(Дугаарын хязгаарлалтаар машин чинь хэд хэд дэх өдөр явахгүйг хэвлэнэ) дугаар оруулна уу"
+  );
+  let a = 0;
+
+  if (b < 1000 || b > 9999 || isNaN(b)) {
+    output = "4 оронтой зөв дугаар (1000-9999) оруулна уу.";
+  } else {
+    a = b % 10;
+    a = a % 5;
+
+    if (a === 1) {
+      output = "Даваа гараг";
+    } else if (a === 2) {
+      output = "Мягмар гараг";
+    } else if (a === 3) {
+      output = "Лхагва гараг";
+    } else if (a === 4) {
+      output = "Пүрэв гараг";
+    } else if (a === 0) {
+      output = "Баасан гараг";
+    }
+  }
+
+  document.getElementById("result").innerText = output;
+}
