@@ -814,7 +814,9 @@ function bodlogo5_9() {
 
 function bodlogo5_10() {
   output = 0;
-  alert("Зөвхөн тэгш тоонуудыг шүүн гарга. (number array, [1,2,3,4,5,6,7])");
+  alert(
+    "Бүх тоонуудыг 2 дахин үржүүлсэн шинэ массив үүсгэ. (number array, [1,2,3,4,5,6,7])"
+  );
   let a = [1, 2, 3, 4, 5, 6, 7];
   let urt = a.length;
   let b = [];
