@@ -570,11 +570,13 @@ function bodlogo3_21() {
 }
 
 function bodlogo4_1() {
+  alert("Pinecone гэж 1 удаа хэвлэ.");
   output = "Pinecone";
   document.getElementById("result").innerText = output;
 }
 
 function bodlogo4_2() {
+  alert("Pinecone гэж 10 удаа хэвлэ.");
   output = " ";
   let a = "Pinecone ";
   let i = 0;
@@ -586,7 +588,7 @@ function bodlogo4_2() {
 }
 
 function bodlogo4_3() {
-  let b = prompt("(Pinecone-г n удаа хэвлэ)");
+  let b = prompt("(Pinecone-г n удаа хэвлэнэ) n-ийг оруул");
   output = " ";
   let a = "Pinecone ";
   let i = 0;
@@ -598,25 +600,257 @@ function bodlogo4_3() {
 }
 
 function bodlogo4_4() {
-  let result = [];
-  output = 1;
-  let i = 2;
-  while (output < 20) {
-    result.push(output);
-
-    const urDun = (document.getElementById("result").innerText = result.map(
-      (too) => {
-        too;
-      }
-    ));
-    console.log(urDun);
-
-    output += i;
+  alert("(20 хүртэлх сондгой тоонуудыг хэвлэх)");
+  output = " ";
+  let i = 1;
+  while (i < 20) {
+    output += i + "\n";
+    i += 2;
   }
+  document.getElementById("result").innerText = output;
 }
 
-const srt = "Hello";
-for (let i = 0; i < str.length; i++) {
-  let result = str[i];
-  return result;
+function bodlogo4_5() {
+  alert("(40 хүртэлх тэгш тоонуудыг хэвлэх)");
+  output = " ";
+  let i = 2;
+  while (i < 40) {
+    output += i + "\n";
+    i += 2;
+  }
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo4_6() {
+  alert("(20 хүртэлх тэгш тоонуудын нийлбэрийг ол.");
+  output = 0;
+  let i = 2;
+  while (i < 20) {
+    output += i;
+    i += 2;
+  }
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo4_7() {
+  alert("(40 хүртэлх сондгой тоонуудын нийлбэрийг ол.");
+  output = 0;
+  let i = 1;
+  while (i < 40) {
+    output += i;
+    i += 2;
+  }
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo4_8() {
+  let n = +prompt("(Өгөгдсөн n тоо хүртэлх тооны нийлбэрийг ол.) n тоог оруул");
+  output = 0;
+  let i = 1;
+  while (i <= n) {
+    output += i;
+    i += 1;
+  }
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo4_9() {
+  let n = +prompt("(100 гийн тоог n удаа нэм.) n тоог оруул");
+  output = 0;
+  let i = 100;
+  output = i * n;
+
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo4_10() {
+  alert("(125 хүртэлх тооны үржвэрийг ол.)");
+  output = 1;
+  let i = 1;
+  while (i <= 12) {
+    output *= i;
+    i += 1;
+  }
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo4_11() {
+  alert("(125 хүртэлх сондгой тооны үржвэрийг ол.)");
+  output = 1;
+  let i = 1;
+  while (i <= 12) {
+    output *= i;
+    i += 2;
+  }
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo4_12() {
+  let n = +prompt("(n тооны factorial ийг ол.) n тоог оруул");
+  output = 1;
+  let i = 1;
+  while (i <= n) {
+    output *= i;
+    i += 1;
+  }
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo5_1() {
+  output = 0;
+  alert("(🥩, 🌾, 🥔, 🥕, 🥬 array ийн уртийг ол)");
+  let a = ["🥩", "🌾", "🥔", "🥕", "🥬"];
+  output = a.length;
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo5_2() {
+  output = 0;
+  let a = [];
+  alert("10 урттай number array үүсгэ");
+  for (let i = 1; i <= 10; i++) {
+    a.push(i);
+  }
+  output = a;
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo5_3() {
+  output = " ";
+  let a = [];
+  alert("5 урттай string array үүсгэ");
+  for (let i = 1; i <= 5; i++) {
+    let b = "student" + i;
+    a.push(b);
+  }
+  output = a;
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo5_4() {
+  output = 0;
+  alert("Массивын эхний ба сүүлийн элементийг харуул. [1,2,3,4,5,6,7]");
+  let a = [1, 2, 3, 4, 5, 6, 7];
+  let urt = a.length;
+  let first = a[0];
+  let last = a[urt - 1];
+  output = "эхний элемент: " + first + " сүүлийн элемент: " + last;
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo5_5() {
+  output = 0;
+  alert(
+    "(одорхой элемент массив дотор байгаа эсэхийг шалга. тусгай тэмдэгт 'byd')"
+  );
+  let a = ["ford", "toyota", "mercedes", " chevrolet ", "tesla", "byd"];
+  let urt = a.length;
+  let n = "byd";
+  let i = 0;
+  while (i < urt) {
+    if (n == a[i]) {
+      output = 1;
+    }
+    i++;
+  }
+  if (output == 1) {
+    output = "[ford, toyota, mercedes, chevrolet, tesla, byd]: " + "true";
+  } else {
+    output = "[ford, toyota, mercedes, chevrolet, tesla, byd]: " + "false";
+  }
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo5_6() {
+  output = 0;
+  alert("Массив дахь хамгийн их тоог ол. (number array , [1,2,3,4,5,6,7])");
+  let a = [1, 2, 3, 4, 5, 6, 7];
+  let max = Math.max(...a);
+  output = max;
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo5_7() {
+  output = 0;
+  alert("Массив дахь хамгийн их тоог ол. (number array , [1,2,3,4,5,6,7])");
+  let a = [1, 2, 3, 4, 5, 6, 7];
+  let min = Math.min(...a);
+  output = min;
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo5_8() {
+  output = 0;
+  alert("Зөвхөн тэгш тоонуудыг шүүн гарга. (number array, [1,2,3,4,5,6,7])");
+  let a = [1, 2, 3, 4, 5, 6, 7];
+  let b = [];
+  i = 1;
+  while (i < 7) {
+    b.push(a[i]);
+    i += 2;
+  }
+  output = b;
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo5_9() {
+  output = 0;
+  alert(
+    "Тодорхой тоо массив дотор хэдэн удаа орсныг тоол. (number array, [ 2,3 , 1,6,7,10,11,2] , 2 )"
+  );
+  let a = [2, 3, 1, 6, 7, 10, 11, 2];
+  let urt = a.length;
+  let b = 0;
+  i = 0;
+  while (i < urt) {
+    if (2 === a[i]) {
+      b += 1;
+    }
+    i++;
+  }
+  output = b;
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo5_10() {
+  output = 0;
+  alert("Зөвхөн тэгш тоонуудыг шүүн гарга. (number array, [1,2,3,4,5,6,7])");
+  let a = [1, 2, 3, 4, 5, 6, 7];
+  let urt = a.length;
+  let b = [];
+  let i = 0;
+  let c = 0;
+  while (i < urt) {
+    b.push(a[c] * 2);
+    c++;
+    i++;
+  }
+  output = b;
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo5_11() {
+  output = " ";
+  alert("Бүх үгсийг том үсгээр (uppercase) болго. [a, b, c, d, e ,f]");
+  let a = ["a", "b", "c", "d", "e", "f"];
+  let urt = a.length;
+  let tom = [];
+  for (i = 0; i < urt; i++) {
+    tom.push(a[i].toUpperCase());
+  }
+  output = "анхны массив: " + a + " томруулсан массив: " + tom;
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo5_12() {
+  output = " ";
+  alert("Бүх үгсийг жижиж үсгээр (lowercase) болго. [A,B,C,D,E,T,Y,I,O,F]");
+  let a = ["A", "B", "C", "D", "E", "T", "Y", "I", "O", "F"];
+  let urt = a.length;
+  let tom = [];
+  for (i = 0; i < urt; i++) {
+    tom.push(a[i].toLowerCase());
+  }
+  output = "анхны массив: " + a + " жижигрүүлсэн массив: " + tom;
+  document.getElementById("result").innerText = output;
 }
