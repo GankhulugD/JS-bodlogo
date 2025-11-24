@@ -678,7 +678,7 @@ function bodlogo4_11() {
   alert("(125 хүртэлх сондгой тооны үржвэрийг ол.)");
   output = 1;
   let i = 1;
-  while (i <= 12) {
+  while (i <= 125) {
     output *= i;
     i += 2;
   }
@@ -854,5 +854,58 @@ function bodlogo5_12() {
     tom.push(a[i].toLowerCase());
   }
   output = "анхны массив: " + a + " жижигрүүлсэн массив: " + tom;
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo6_1() {
+  output = " ";
+  alert("10 аас 1 рүү буурах дарааллар хэвлэ");
+  for (i = 10; i > 0; i--) {
+    output += i + " ";
+  }
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo6_2() {
+  output = "";
+  let n = prompt("(өгөгдсөн n тооны хүрдийг харуул) n тоог оруул");
+  for (i = 1; i <= 10; i++) {
+    output += n + "*" + i + "=" + n * i + "\n";
+  }
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo6_3() {
+  output = 2;
+  let n = prompt("(2 ийн n зэргийг ол.) n тоог оруул");
+  for (i = 1; i < n; i++) {
+    output *= 2;
+  }
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo6_4() {
+  output = 0;
+  let sum = 0;
+  let n = prompt("(өгөгдсөн тооний цифрүүдийн нийлбэрийг ол.) тоог оруул");
+  let sim = n;
+  let urt = n.length;
+  for (i = 1; i <= urt; i++) {
+    sum += sim % 10;
+    sim = Math.floor(sim / 10);
+  }
+  output = sum;
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo6_5() {
+  output = 0;
+  let sum = 0;
+  let n = prompt("(өгөгдсөн тооний хэдэн оронтойг ол.) тоог оруул");
+  for (i = 1; n > 0; i++) {
+    n = Math.floor(n / 10);
+    sum += 1;
+  }
+  output = sum;
   document.getElementById("result").innerText = output;
 }
