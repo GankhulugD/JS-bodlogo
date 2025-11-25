@@ -924,31 +924,31 @@ function bodlogo6_6() {
 //     output=
 //   }
 // }
-function bodlogo6_7() {
+function tooTaah() {
   output = 0;
   let b = 0;
   let c = [];
   let d = 0;
-  d = Math.random() * 100;
+  d = Math.random() * 10;
   b = Math.floor(d % 10) + 1;
   a = -1;
-  a = +prompt(
-    "1-10 хооронд тоо оруулах ба компютерээс өгсөн тоотой тэнцүү байвал та ялна) тоо оруул"
-  );
-  c.push(a);
-  if (a > 10 || a < 1) {
-    output = "1-10 ийн хооронд тоо оруулна уу";
-  } else if (typeof a === "string") {
-    output = "та string биш 1-10 хооронд тоо оруулна уу";
-  } else {
-    if (a === b) {
-      output = a + "=" + b + " та яллаа";
-    } else if (a > b || a < b) {
-      output = a + " болон " + b + " тэнцүү биш та ялагдлаа";
+  while (a !== b) {
+    a = +prompt(
+      "1-10 хооронд тоо оруулах ба компютерээс өгсөн тоотой тэнцүү байвал та ялна) тоо оруул"
+    );
+    c.push(a);
+    if (a > 10 || a < 1) {
+      output = "1-10 ийн хооронд тоо оруулна уу";
+    } else {
+      if (a === b) {
+        output = a + "=" + b + " та яллаа";
+      } else if (a > b || a < b) {
+        output = a + " болон " + b + " тэнцүү биш та ялагдлаа";
+      }
+      console.log(d);
+      console.log(b);
     }
-    console.log(d);
-    console.log(b);
+    console.log(c);
+    document.getElementById("result").innerText = output;
   }
-  console.log(c);
-  document.getElementById("result").innerText = output;
 }
