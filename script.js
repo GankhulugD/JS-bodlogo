@@ -909,3 +909,46 @@ function bodlogo6_5() {
   output = sum;
   document.getElementById("result").innerText = output;
 }
+
+function bodlogo6_6() {
+  output = 0;
+  let a = prompt("(өгөгдсөн тооны квадратыг ол) тоог оруул");
+  output = a * a;
+  document.getElementById("result").innerText = output;
+}
+
+// function bodlogo6_7(){
+//   output=1;
+//   let a=prompt("(1 ээс N тоо хүртэлх тоонуудын кубын нийлбэр) N тоог оруулна уу");
+//   for(i=1; i<=n; i++){
+//     output=
+//   }
+// }
+function bodlogo6_7() {
+  output = 0;
+  let b = 0;
+  let c = [];
+  let d = 0;
+  d = Math.random() * 100;
+  b = Math.floor(d % 10) + 1;
+  a = -1;
+  a = +prompt(
+    "1-10 хооронд тоо оруулах ба компютерээс өгсөн тоотой тэнцүү байвал та ялна) тоо оруул"
+  );
+  c.push(a);
+  if (a > 10 || a < 1) {
+    output = "1-10 ийн хооронд тоо оруулна уу";
+  } else if (typeof a === "string") {
+    output = "та string биш 1-10 хооронд тоо оруулна уу";
+  } else {
+    if (a === b) {
+      output = a + "=" + b + " та яллаа";
+    } else if (a > b || a < b) {
+      output = a + " болон " + b + " тэнцүү биш та ялагдлаа";
+    }
+    console.log(d);
+    console.log(b);
+  }
+  console.log(c);
+  document.getElementById("result").innerText = output;
+}
