@@ -917,13 +917,30 @@ function bodlogo6_6() {
   document.getElementById("result").innerText = output;
 }
 
-// function bodlogo6_7(){
-//   output=1;
-//   let a=prompt("(1 ээс N тоо хүртэлх тоонуудын кубын нийлбэр) N тоог оруулна уу");
-//   for(i=1; i<=n; i++){
-//     output=
-//   }
-// }
+function bodlogo6_7() {
+  output = 0;
+  let n = prompt(
+    "(1 ээс N тоо хүртэлх тоонуудын кубын нийлбэр) N тоог оруулна уу"
+  );
+  for (i = 1; i <= n; i++) {
+    output += i * i * i;
+  }
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo6_8() {
+  output = "";
+  alert(
+    "1-30 хүртэлх тоонууд дундаас 2 болон 3-т зэрэг хуваагддаг тоонуудыг хэвлэ"
+  );
+  for (i = 1; i <= 30; i++) {
+    if (i % 2 === 0 && i % 3 === 0) {
+      output += i + " ";
+    }
+  }
+  document.getElementById("result").innerText = output;
+}
+
 function tooTaah() {
   output = 0;
   let b = 0;
