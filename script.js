@@ -917,30 +917,13 @@ function bodlogo6_6() {
   document.getElementById("result").innerText = output;
 }
 
-function bodlogo6_7() {
-  output = 0;
-  let n = prompt(
-    "(1 ээс N тоо хүртэлх тоонуудын кубын нийлбэр) N тоог оруулна уу"
-  );
-  for (i = 1; i <= n; i++) {
-    output += i * i * i;
-  }
-  document.getElementById("result").innerText = output;
-}
-
-function bodlogo6_8() {
-  output = "";
-  alert(
-    "1-30 хүртэлх тоонууд дундаас 2 болон 3-т зэрэг хуваагддаг тоонуудыг хэвлэ"
-  );
-  for (i = 1; i <= 30; i++) {
-    if (i % 2 === 0 && i % 3 === 0) {
-      output += i + " ";
-    }
-  }
-  document.getElementById("result").innerText = output;
-}
-
+// function bodlogo6_7(){
+//   output=1;
+//   let a=prompt("(1 ээс N тоо хүртэлх тоонуудын кубын нийлбэр) N тоог оруулна уу");
+//   for(i=1; i<=n; i++){
+//     output=
+//   }
+// }
 function tooTaah() {
   output = 0;
   let b = 0;
@@ -962,10 +945,273 @@ function tooTaah() {
       } else if (a > b || a < b) {
         output = a + " болон " + b + " тэнцүү биш та ялагдлаа";
       }
-      console.log(d);
+      // console.log(d);
       console.log(b);
     }
     console.log(c);
     document.getElementById("result").innerText = output;
   }
+}
+
+function bodlogo7_1() {
+  output = 0;
+  let a = [1, 2, 3, 4, 5];
+  alert("Тоон массивыг квадратласан шинэ массив болго.");
+  let b = a.map(function kawadrat(a) {
+    return a * a;
+  });
+  output = "[1, 2, 3, 4, 5]" + "\n" + b;
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo7_2() {
+  output = 0;
+  let a = [1, 2, 3, 4, 5];
+  b = "";
+  alert("Тоонуудыг “тэгш” эсвэл “сондгой” гэсэн стринг болгон хувирга.");
+  b += a.map(function kawadrat(a) {
+    if (a % 2 === 0) {
+      return "tegsh";
+    } else {
+      return "sondgoi";
+    }
+  });
+  output = "[1, 2, 3, 4, 5]" + "\n" + b;
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo7_3() {
+  output = 0;
+  let a = ["a", "b", "c", "d", "e"];
+  alert("Массивын бүх элементэд “!” нэмээд console-д хэвлэх.");
+  let b = a.map(function kawadrat(a) {
+    return a + "!";
+  });
+  output = "[a,b,c,d,e]" + "\n" + b;
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo7_4() {
+  output = 0;
+  let a = [1, 2, 3, 4, 5];
+  alert(
+    "Наснуудын массиваас 2025 он дээр үндэслэн төрсөн жилүүдийн массив гарга."
+  );
+  let b = a.map(function kawadrat(a) {
+    return 2025 - a;
+  });
+  output = "[1, 2, 3, 4, 5]" + "\n" + b;
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo7_5() {
+  output = 0;
+  let a = ["aq", "bqq", "cqqq", "dqqqq", "eqqqqq"];
+  alert("Стринг бүрийн эхний үсгийг том болго.");
+  let b = a.map(function kawadrat(a) {
+    let first = a[0].toLocaleUpperCase();
+    let busad = a.substring(1);
+    return first + busad;
+  });
+  output = "[aq,bqq,cqqq,dqqqq,eqqqqq]" + "\n" + "[" + b.join(", ") + "]";
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo7_6() {
+  output = 0;
+  let a = ["aq", "bqq", "cqqq", "dqqqq", "eqqqqq"];
+  alert("Стринг массивыг тэдгээрийн уртын массив болгон хувирга.");
+  let b = a.map(function kawadrat(a) {
+    return a.length;
+  });
+  output = "[aq,bqq,cqqq,dqqqq,eqqqqq]" + "\n" + "[" + b.join(", ") + "]";
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo7_7() {
+  output = 0;
+  let a = [1000, 2000, 3000, 4000, 5000];
+  alert("Бүтээгдэхүүний массив дахь бүх үнэд 10% нэмсэн шинэ массив гарга.");
+  let b = a.map(function kawadrat(a) {
+    return a + a / 10;
+  });
+  output = "[1000, 2000, 3000, 4000, 5000]" + "\n" + "[" + b.join(", ") + "]";
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo7_8() {
+  output = 0;
+  let a = [1000, 2000, 3000, 4000, 5000];
+  alert("Тоонуудыг “₮1,200” гэх мэт форматтай мөнгөн дүнгийн стринг болго.");
+  let b = a.map(function kawadrat(a) {
+    return "₮" + a;
+  });
+  output = "[1000, 2000, 3000, 4000, 5000]" + "\n" + "[" + b.join(", ") + "]";
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo7_9() {
+  output = 0;
+  let a = [true, false, true, true, false];
+  b = "";
+  alert("Boolean утгуудыг “ТИЙМ” эсвэл “ҮГҮЙ” стринг болгон хувирга.");
+  b = a.map(function kawadrat(l) {
+    if (l === true) {
+      return "ТИЙМ";
+    } else {
+      return "ҮГҮЙ";
+    }
+  });
+  output = "[true, false, true, true, false]" + "\n" + "[" + b.join(", ") + "]";
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo7_10() {
+  output = 0;
+  let a = [1, 2, 3, 4, 5];
+  alert("Тоон массивыг квадратласан шинэ массив болго.");
+  let b = a.map(function kawadrat(a) {
+    return a + 1;
+  });
+  output = "[1, 2, 3, 4, 5]" + "\n" + "[" + b.join(", ") + "]";
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo8_1() {
+  output = "";
+  let a = [1, 2, 3, 4, 5];
+  alert("Массивын бүх элементийг хэвлэх [1,2,3] → 1 2 3 гэж console.log хийх");
+  a.forEach(function kawadrat(a) {
+    console.log(a);
+    output += a + " ";
+    document.getElementById("result").innerText = output;
+  });
+  // output = "[1, 2, 3, 4, 5]" + "\n" + "[" + b.join(", ") + "]";
+  // document.getElementById("result").innerText = output;
+}
+
+function bodlogo8_2() {
+  output = 0;
+  let a = [1, 2, 3, 4, 5];
+  alert("Нийлбэр олох (sum)forEach ашиглан [1,2,3,4] → 10");
+  output = `[1, 2, 3, 4, 5]` + "\n";
+  let sum = 0;
+  a.forEach(function kawadrat(a) {
+    sum += a;
+  });
+  output += sum + " ↵";
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo8_3() {
+  output = 0;
+  let a = [1, 2, 3, 9, 4, 5, 6, 7];
+  let baga = [];
+  let ih = [];
+  alert("Хэрвээ тоо 5-аас их бол тусад нь push хийх[1,6,3,8] → [6,8]");
+  a.forEach(function kawadrat(a) {
+    if (a <= 5) {
+      baga.push(a);
+    } else {
+      ih.push(a);
+    }
+  });
+  output = "[1, 2, 3, 9, 4, 5, 6, 7] ↵" + "\n" + "[" + baga + "],[" + ih + "]";
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo8_4() {
+  output = 0;
+  let a = [1, 2, 3, 4, 5];
+  b = "";
+  alert("Тоонуудыг “тэгш” эсвэл “сондгой” гэсэн стринг болгон хувирга.");
+  output = "[1, 2, 3, 4, 5] ↵" + "\n";
+  a.forEach(function kawadrat(a) {
+    if (a % 2 === 0) {
+      output += "тэгш, ";
+    } else {
+      output += "сондгой, ";
+    }
+  });
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo8_5() {
+  output = 0;
+  let a = [1, 2, 3, 4, 5];
+  outp = "[";
+  alert("Шинэ массив руу 2 дахин үржүүлж push хийх [1,2,3] → [2,4,6]");
+  a.forEach(function kawadrat(a) {
+    outp += a * 2 + ", ";
+  });
+  outp += "]";
+  output = "[1, 2, 3, 4, 5]" + "\n" + outp;
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo8_6() {
+  output = 0;
+  let a = ["a", "b", "c", "d", "e"];
+  let b = "";
+  alert(
+    "Нэр бүрийн ард “-student” нэмээд хэвлэх [Bold, Suren] → Bold-student, Suren-student"
+  );
+  a.forEach(function kawadrat(a) {
+    b += a + "-Student, ";
+  });
+  output = "[a,b,c,d,e]" + "\n" + b;
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo8_7() {
+  output = 0;
+  let a = ["a", "b", "c", "d", "e"];
+  let b = 0;
+  alert("Массивт хэдэн элемент байгааг forEach ашиглан count хийх [a,b,c] → 3");
+  a.forEach(function kawadrat(a) {
+    b++;
+  });
+  output = "[a,b,c,d,e]" + "\n" + b;
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo8_8() {
+  output = 0;
+  let a = ["a", "ba", "ac", "d", "e"];
+  let c = [];
+  alert("“a” үсэг агуулсан үгсийг ялгаж хэвлэх [bat,dorj,amar] → bat, amar");
+  a.forEach(function kawadrat(word) {
+    if (word.includes("a")) {
+      c.push(word);
+    }
+  });
+  output = "[a,b,c,d,e]" + "\n" + c;
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo8_9() {
+  output = 0;
+  let a = [-1, 2, 1, -4, 5];
+  let c = [];
+  alert("Тоонуудын сөрөг утгыг console.log хийх [3,-2,5,-10] → -2, -10");
+  a.forEach(function kawadrat(word) {
+    if (word < 0) {
+      c.push(word);
+    }
+  });
+  output = "[-1, 2, 1, -4, 5]" + "\n" + c;
+  document.getElementById("result").innerText = output;
+}
+
+function bodlogo8_10() {
+  output = 0;
+  let a = ["aq", "bqq", "cqqq", "dqqqq", "eqqqqq"];
+  let c = [];
+  alert("Стринг бүрийн эхний үсгийг том болго.");
+  let b = a.map(function kawadrat(a) {
+    let first = a[0];
+    c.push(first);
+  });
+  output = "[aq,bqq,cqqq,dqqqq,eqqqqq]" + "\n" + c;
+  document.getElementById("result").innerText = output;
 }
