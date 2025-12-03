@@ -1,0 +1,158 @@
+/* Нийтлэг тохиргоо */
+* {
+  box-sizing: border-box; /* Бүх элементүүдэд padding, border-ийг өргөнд тооцох */
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f5f5f5; /* Bulma-тай төстэй фон */
+}
+
+/* Товчлуурын нийтлэг стиль */
+.button {
+  margin: 5px;
+  padding: 8px 15px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s, border-color 0.3s;
+  width: 100%; /* Бүх товчлуурыг 100% өргөнтэй болгох */
+}
+
+/* Товчлуурын өнгөний классууд */
+.is-success {
+  background-color: #48c78e;
+  color: white;
+  border-color: #48c78e;
+}
+.is-info {
+  background-color: #3e8edc;
+  color: white;
+  border-color: #3e8edc;
+}
+.is-warning {
+  background-color: #ffdd57;
+  color: rgba(0, 0, 0, 0.7);
+  border-color: #ffdd57;
+}
+.is-danger {
+  background-color: #f14668;
+  color: white;
+  border-color: #f14668;
+}
+.is-link {
+  background-color: #3e8edc; /* info-той ижил өгсөн */
+  color: white;
+  border-color: #3e8edc;
+}
+.is-primary {
+  background-color: #00d1b2;
+  color: white;
+  border-color: #00d1b2;
+}
+.is-dark {
+  background-color: #363636;
+  color: white;
+  border-color: #363636;
+}
+.button:hover {
+  opacity: 0.8;
+}
+
+/* Flexbox/Grid-д суурилсан Layout классууд */
+.container {
+  width: 100%;
+  max-width: 960px; /* Энэ нь Bulma-ийн default max-width-тай ойролцоо */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap; /* Олон мөр үүсгэх боломжтой */
+  margin-left: -0.75rem; /* Нэг мөр доторх зайг (gap) нөхөх */
+  margin-right: -0.75rem;
+}
+
+.column {
+  padding: 0.75rem; /* Нэг баганын padding */
+  min-width: 0; /* Flex-тэй холбоотой алдааг засах */
+}
+
+/* Баганын өргөн (Mobile-д 100%, нийт өргөн 12 гэж үзэж, 2/12 = 16.66% гэх мэт) */
+.is-2 {
+  width: 16.6667%; /* 2 / 12 */
+}
+.is-two-thirds {
+  width: 66.6667%; /* 8 / 12 */
+}
+.is-offset-one-sixth {
+  margin-left: 16.6667%; /* 2 / 12 */
+}
+
+/* Зай классууд */
+.mt-6 {
+  margin-top: 3rem !important; /* mt-6: 3rem */
+}
+.mb-3 {
+  margin-bottom: 1rem !important; /* mb-3: 1rem */
+}
+
+/* Flexbox-ийн төвлөрүүлэлт */
+.mid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Үр дүнгийн мэдээллийн хэсэг (Message) */
+.message {
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.message.is-primary {
+  background-color: #e6fffb; /* Message Background */
+  border: 1px solid #00d1b2; /* Message Border Color (Primary) */
+}
+
+.message-header {
+  background-color: #00d1b2; /* Header Background (Primary) */
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 4px 4px 0 0;
+  font-weight: bold;
+}
+
+.message-body {
+  padding: 1rem;
+  background-color: white; /* Body Background */
+  border-radius: 0 0 4px 4px;
+  border-top: 1px solid #dbdbdb;
+}
+
+/* Responsive тохиргоо (Mobile-д зориулсан) */
+@media screen and (max-width: 768px) {
+  /* is-mobile дээр is-2 нь 100% болж, 2 мөрөнд 5 товчлуурыг байрлуулах (20%-аар) */
+  .columns.is-mobile > .is-2 {
+    width: 20%; /* 5 товчлуур нэг мөрөнд */
+  }
+
+  /* Үндсэн контентийн багана */
+  .column.is-two-thirds {
+    width: 100%; /* Бүтэн өргөн */
+  }
+  .is-offset-one-sixth {
+    margin-left: 0; /* Offset-ийг унтраах */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Маш жижиг дэлгэцэнд 3 товчлуур нэг мөрөнд (33.33%-аар) */
+  .columns.is-mobile > .is-2 {
+    width: 33.3333%;
+  }
+}
