@@ -428,7 +428,7 @@ function bodlogo3_14() {
   let a = +prompt(
     "(Тоог 100-аас их, 0-аас бага эсэхийг шалгах) тоог оруулна уу"
   );
-  if (a < 100) {
+  if (a > 100) {
     output = "тоо 100 аас их байна";
   } else if (a < 0) {
     output = "тоо 0 ээс бага байна";
@@ -667,7 +667,7 @@ function bodlogo4_10() {
   alert("(125 хүртэлх тооны үржвэрийг ол.)");
   output = 1;
   let i = 1;
-  while (i <= 12) {
+  while (i <= 125) {
     output *= i;
     i += 1;
   }
